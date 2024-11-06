@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Note - Notes App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white font-bold text-xl">Notes App</div>
+            <div>
+                <a href="/" class="text-white hover:text-blue-200 mr-4">Home</a>
+                <a href="/new-note" class="text-white hover:text-blue-200">New Note</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto mt-8 p-4 text-center w-96">
+        <h1 class="text-2xl font-bold mb-6">Create a New Note</h1>
+        <form action="/newbanao" method="get" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="note-name">
+                    Note Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="note-name" type="text" name="noteName" placeholder="Enter note name" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="note-content">
+                    Note Content
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="note-content" name="noteContent" rows="6" placeholder="Write your note here" required></textarea>
+            </div>
+            <div class="flex items-center justify-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" >
+                    Create Note
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
